@@ -4,11 +4,9 @@ class CreateArtists < ActiveRecord::Migration
 
   def down
   end
-end
 
-sql = <<-SQL
-  CREATE TABLE artists (
-      id INTEGER PRIMARY KEY,
-      name TEXT,
-  );
-SQL
+  def change
+    create_table :artists do |t|
+    end
+  end
+end
